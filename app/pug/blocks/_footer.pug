@@ -1,2 +1,70 @@
+-
+	var menu = [
+		'Shop',
+		'The Science',
+		'The Story',
+		'Contact Us'
+	];
+
+	var info = [
+		'Faq',
+		'Shipping & Returns',
+		'Billing',
+	];
+
+	var menu2 = [
+		'Shop',
+		'The Science',
+	];
+
+	var social = [
+		{
+			link: 'https://facebook.com',
+			ico: 'fab fa-facebook-f'
+		},
+		{
+			link: 'https://pinterest.com',
+			ico: 'fab fa-pinterest-p'
+		},
+		{
+			link: 'https://instagram.com',
+			ico: 'fab fa-instagram'
+		}
+	];
+
 footer.footer
-    .box
+	.box
+		.footer__first-layout
+			.footer__section.section-logo
+				a(href="/" class="footer-logo")
+					img(src="img/icons/footer-logo.svg", alt="Logo")
+			.footer__section.first-menu
+				span(class="footer__title") Menu
+				ul(class="footer__list")
+					each item in menu
+						li(class="footer__list-item")
+							a(href="/")=item
+			.footer__section.info
+				span(class="footer__title") Info
+				ul(class="footer__list")
+					each item in info
+						li(class="footer__list-item")
+							a(href="/")=item
+			.footer__section.second-menu
+				span(class="footer__title") Menu2
+				ul(class="footer__list")
+					each item in menu2
+						li(class="footer__list-item")
+							a(href="/")=item
+			.footer__section.about
+				span(class="footer__title") About Us
+				span(class="footer__text") The only brand in the world to offer the next generation sincare treatments for men
+				ul(class="footer__social")
+					each item in social
+						li(class="footer__social-item")
+							a(href=item.link)
+								i(class=item.ico)
+
+		.footer__second-layout
+			p(class="copyright") © 2019. John Leo Rose. All rights reserved.
+			a(href="/") Site map	   
