@@ -1,0 +1,20 @@
+-
+    var nav = [
+      'Главная',
+      'О компании',
+      'Бренды',
+      'Клиентам',
+      'Акции',
+      'Контакты',
+      'Новости'
+    ]                     
+header.header
+    #header-info-block
+        span All orders have FREE and Fast shipping
+    .box
+        .header__body
+            nav.header__nav
+                ul.header__nav-list
+                    each item in nav
+                        li.header__nav-li
+                            a.header__nav-link(href="#" target="_blank")!=item
