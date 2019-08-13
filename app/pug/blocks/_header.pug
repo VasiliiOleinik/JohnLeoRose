@@ -1,21 +1,29 @@
 -
-    var nav = [
-      'Главная',
-      'О компании',
-      'Бренды',
-      'Клиентам',
-      'Акции',
-      'Контакты',
-      'Новости'
-    ]                     
-header.header
-    #header-info-block
-        span All orders have FREE and Fast shipping
-        img(src="img/icons/close.svg", alt="")
-    .box
-        .header__left
-            .logo-block
-                a(href="/" class="logo")
-                    img(src="img/logo.png", alt="Logo")
-            .
-        .header__right
+	var menu = [
+		'Shop',
+		'The Science',
+		'The Story'
+	];
+
+header
+	#header-info-block
+		span All orders have FREE and Fast shipping
+		img(src="img/icons/close.svg", alt="" id="close-header-info")
+
+	.header__content
+		.box
+			.header__content-left
+				.logo-block
+					a(href="/" class="logo")
+						img(src="img/logo.png", alt="Logo")
+				.menu
+					ul(class="menu__list")
+						each item in menu
+							li(class="menu__list-item")
+								a(href="/")=item
+			.header__content-right
+				a(href="/" class='contact-us') Contact us
+				a(href="/" class="header-personal")
+					img(src="img/icons/user.svg", alt="User")
+				a(href="/" class="header-shop")
+					img(src="img/icons/shop.svg", alt="Shop")

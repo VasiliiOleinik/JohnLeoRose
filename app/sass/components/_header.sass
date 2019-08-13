@@ -1,0 +1,100 @@
+header
+	#header-info-block
+		width: 100%
+		height: 40px
+		background: #D9DADC
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+
+		& span
+			font-size: 14px
+			text-transform: uppercase
+			color: #01002C
+		
+		& img
+			position: absolute
+			right: 8px
+			top: 50%
+			transform: translate(0%, -50%)
+			cursor: pointer
+
+	& .header__content
+		position: relative
+
+		& .box
+			width: 100%
+			height: 72px
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+			& .header__content-left
+				display: flex
+				height: 100%
+
+				& .logo-block
+					width: 100px
+					height: 100%
+					display: flex
+					margin-right: 40px
+
+					&:before
+						content: ''
+						width: 20%
+						position: absolute
+						left: 0
+						top: 0
+						height: 72px
+						background: $main
+						display: block
+						z-index: 0
+
+					& .logo
+						width: 100%
+						height: 100%
+						display: flex
+						align-items: center
+						justify-content: center
+						background: $main
+
+						& img
+							width: 100%
+
+				& .menu
+					height: 100%
+					display: flex
+					align-items: center
+
+					&__list
+						display: flex
+						align-items: center
+						flex-direction: row
+
+						&-item
+							margin-right: 25px
+
+							& a
+								font-size: 20px
+								color: $main
+								padding-right: 27px
+								border-right: 2px solid $main
+								text-transform: uppercase
+
+			& .header__content-right
+				display: flex
+				height: 100%
+				align-items: center
+
+				& .contact-us
+					font-size: 20px
+					color: $main
+					text-transform: uppercase
+					margin-right: 40px
+
+				& .header-personal
+					margin-right: 20px
+
+
+		
