@@ -43,6 +43,7 @@
 		align-items: center
 		flex-wrap: wrap
 		padding-bottom: 95px
+		margin-bottom: 95px
 
 		& .box
 			display: flex
@@ -125,9 +126,6 @@
 
 			& .title
 				width: 100%
-				border-top: 2px solid $main
-				border-bottom: 2px solid $main
-				padding: 10px 0px
 				margin-bottom: 15px
 
 			&-text
@@ -174,3 +172,103 @@
 					& .plus-ico
 						margin-bottom: 10px
 
+	& .result-section
+		width: 100%
+		margin-bottom: 95px
+		
+		& .box
+			display: flex
+			justify-content: center
+			flex-direction: column
+
+			& .title.dark
+				max-width: 85px
+				width: 100%
+				margin: 0 auto
+				margin-bottom: 65px
+			
+		&__list
+			display: flex
+			width: 100%
+			justify-content: space-between
+			align-items: flex-start
+
+			&-item
+				display: flex
+				flex-direction: row
+				align-items: flex-start
+				width: 100%
+				padding-right: 34px
+
+				& .item-ico-section
+					margin-right: 18px
+					width: 64px
+					height: 64px
+					background: $main
+					border-radius: 50%
+					display: flex
+					align-items: center
+					justify-content: center
+					position: relative
+					flex-shrink: 0
+
+					& img
+						max-width: 30px
+
+					&:before
+						content: ""
+						margin-right: 18px
+						width: 66px
+						height: 66px
+						background: $orange
+						border-radius: 50%
+						display: flex
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						left: -2px
+						z-index: -1
+
+					&:after
+						content: ""
+						margin-right: 18px
+						width: 66px
+						height: 66px
+						background: $green
+						border-radius: 50%
+						display: flex
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: -20px
+						z-index: -2
+
+				& .item-text-section
+					display: flex
+					flex-direction: column
+					padding-top: 24px
+
+					&__title
+						font-family: BravoRG
+						font-size: 20px
+						font-weight: 400
+						text-transform: uppercase
+						margin-bottom: 10px
+
+					&__list
+						width: 100%
+						display: flex
+						flex-direction: column
+						
+						&-item
+							display: flex
+							width: 100%
+							margin-bottom: 10px
+							font-size: 16px
+							color: $main
+							opacity: .5
+
+							& .plus-ico
+								opacity: .5
+								margin-right: 10px
+						

@@ -1,6 +1,21 @@
 extends blocks/_layout
 append content
-
+	-
+		var instant = [
+			'Energising Skin Hydration',
+			'Reducing Fatigued Look ',
+			'Brighter-Looking Skin',
+		];
+		var renewal = [
+			'Protection against environmental aggressors (UV, Pollution, Stress, Smoke)',
+			'Brighter, Smoother & more Radiant Skin Complection ',
+			'Radiant Skin Complection Increased Skin Elasticity & Repaired Cell Damage',
+		];
+		var results = [
+			'Visibily Reduced Signs of Aging ',
+			'Aging Skin Looks & Feels Firmer',
+			'Evened Out Skin Tone & Reduced Appearance of Pores',
+		];
 	main.main
 		.main__banner
 			.box
@@ -14,13 +29,13 @@ append content
 							img(src="img/icons/shop.svg", alt="Shop")
 							span start shopping
 		.combination-section
-			a(href="javascript:void(0)" class="scroll-to-explore" id="scroll-to-explore-js") Scroll to Explore
+			a(class="scroll-to-explore" id="scroll-to-explore-js" href="javascript:void(0)") Scroll to Explore
 			.cookies
 				.cookies-container
 					span(class="cookies-text") By further browsing on our site, you agree to our Use of Cookies to improve your experience and deliver content and services tailored to your interests
-					a(href="javascript:void(0)" class="hide-cookies" id="hide-cookies-js") Close & Accept
+					a(class="hide-cookies" id="hide-cookies-js" href="javascript:void(0)") Close & Accept
 			.box
-				img(src="img/baloon2.png", alt="Baloon" class="combination-section__left-baloon")
+				img(class="combination-section__left-baloon", src="img/baloon2.png", alt="Baloon")
 				.combination-section__main
 					h2(class="title dark") Combination of cream & pills is key for results men’s skin all types all ages
 					span(class="combination-section__main-text") Based on 40 years of pharma science research
@@ -40,5 +55,40 @@ append content
 						a(class="animate-btn__link" href="/") 
 							img(src="img/icons/shop.svg", alt="Shop")
 							span Shop now
+				img(class="combination-section__right-baloon", src="img/baloon1.png", alt="Baloon")
+		.result-section
+			.box
+				h2(class="title dark") Results
+				.result-section__list
+					.result-section__list-item
+						.item-ico-section
+							img(src="/img/icons/instant.png", alt="Instant")
+						.item-text-section
+							span( class="item-text-section__title") Instant Boost
+							ul(class="item-text-section__list")
+								each item in instant 
+									li(class="item-text-section__list-item")
+										.plus-ico
+										span=item
+					.result-section__list-item
+						.item-ico-section
+							img(src="/img/icons/renewal.png", alt="Renewal")
+						.item-text-section
+							span( class="item-text-section__title") 28 Days Skin Renewal 
+							ul(class="item-text-section__list")
+								each item in renewal 
+									li(class="item-text-section__list-item")
+										.plus-ico
+										span=item
+					.result-section__list-item
+						.item-ico-section
+							img(src="/img/icons/results.png", alt="Result") 
+						.item-text-section
+							span( class="item-text-section__title") 12 WeeKS LOngterm results 
+							ul(class="item-text-section__list")
+								each item in results 
+									li(class="item-text-section__list-item")
+										.plus-ico
+										span=item
 
-				img(src="img/baloon1.png", alt="Baloon" class="combination-section__right-baloon")
+
