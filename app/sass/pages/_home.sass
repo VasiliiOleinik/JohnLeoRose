@@ -181,11 +181,11 @@
 			justify-content: center
 			flex-direction: column
 
-			& .title.dark
-				max-width: 85px
-				width: 100%
-				margin: 0 auto
-				margin-bottom: 65px
+		& .title.dark
+			max-width: 85px
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 65px
 			
 		&__list
 			display: flex
@@ -272,3 +272,115 @@
 								opacity: .5
 								margin-right: 10px
 						
+	& .ingridients-section
+		width: 100%
+		margin-bottom: 95px
+			
+		& .title.dark
+			max-width: 270px
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 65px
+
+		&__content
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			position: relative
+			width: 100%
+
+			&-central
+				position: absolute
+				max-width: 400px
+				width: 100%
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+			
+			&-side
+				max-width: 265px
+				width: 100%
+				display: flex
+				flex-direction: column
+				justify-content: center
+
+				& .content-side__item
+					width: 100%
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					margin-bottom: 40px
+
+					&-img
+						width: 68px
+						margin-bottom: 10px
+					
+					&-title
+						font-family: BravoRG
+						font-size: 20px
+						font-weight: 600
+						margin-bottom: 10px
+						display: flex
+						text-transform: uppercase
+						color: $main
+
+					&-text
+						font-size: 14px
+						color: $main
+						opacity: .5
+						text-align: center
+		& .dark-btn
+			max-width: 188px
+			width: 100%
+			margin: 0 auto
+
+	& .without-section
+		width: 100%
+		margin-bottom: 95px
+
+		& .title.dark
+			max-width: 100px
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 25px
+
+		&__content
+			max-width: 580px
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin: 0 auto
+
+			&-info
+				display: flex
+				width: 100%
+				margin-bottom: 40px
+				justify-content: center
+				align-items: center
+				font-size: 20px
+				color: rgba(1, 0, 44, 0.5)
+
+			&-list
+				width: 100%
+				display: flex
+				flex-direction: row
+				align-items: flex-start
+				justify-content: space-between
+
+				& .content-list-item
+					width: 100%
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+
+					&-img
+						width: 64px
+						margin-bottom: 10px
+					
+					&-text
+						font-family: BravoRG
+						font-size: 20px
+						color: $main

@@ -16,6 +16,58 @@ append content
 			'Aging Skin Looks & Feels Firmer',
 			'Evened Out Skin Tone & Reduced Appearance of Pores',
 		];
+		var leftSide = [
+			{
+				img: 'img/apple.png',
+				title: 'Apple Extract',
+				text: 'A vitamin-rich blend of highly potent anti-oxidants, vitamin C and E. Neutralises wrinkle-inducing free radicals and protects from external aggressors '
+			},
+			{
+				img: 'img/ginger.png',
+				title: 'Ginger roots extract',
+				text: 'A powerful mix of 40 anti-oxidants that protect the skin, simulate circulation and strengthen skin cells'
+			},
+			{
+				img: 'img/hops.png',
+				title: 'Hops extract',
+				text: 'Efficiently detoxifies and moisturises skin. Slows down signs of aging '
+			},
+		];
+		var rightSide = [
+			{
+				img: 'img/lutein.png',
+				title: 'Lutein',
+				text: ' A powerful anti-oxidant that fights free radical damage from harmful blue light or sunlight UV radiation '
+			},
+			{
+				img: 'img/ascorbine.png',
+				title: 'Ascorbine acid',
+				text: '(Vitamin C) hydrates skin, boosts firm-feeling skin with brightening and skin toning effects'
+			},
+			{
+				img: 'img/alpha.png',
+				title: 'Alpha-Tocopherol',
+				text: 'Known as vitamin E, visibly reverses signs of aging by repairing cell damage and boosting collagen production'
+			},
+		];
+		var without = [
+			{
+				img: '/img/icons/caffeine-free.png',
+				text: 'Caffeine free'
+			},
+			{
+				img: '/img/icons/gluten-free.png',
+				text: 'Gluten free'
+			},
+			{
+				img: '/img/icons/no-syntetics.png',
+				text: 'No Synthetics'
+			},
+			{
+				img: '/img/icons/parabens-free.png',
+				text: 'Parabens free'
+			}
+		];
 	main.main
 		.main__banner
 			.box
@@ -57,8 +109,8 @@ append content
 							span Shop now
 				img(class="combination-section__right-baloon", src="img/baloon1.png", alt="Baloon")
 		.result-section
+			h2(class="title dark") Results
 			.box
-				h2(class="title dark") Results
 				.result-section__list
 					.result-section__list-item
 						.item-ico-section
@@ -90,5 +142,32 @@ append content
 									li(class="item-text-section__list-item")
 										.plus-ico
 										span=item
-
+		.ingridients-section
+			h2(class="title dark") Six active ingridients
+			.box
+				.ingridients-section__content
+					.ingridients-section__content-side
+						each item in leftSide
+							.content-side__item
+								img(class="content-side__item-img", src=item.img, alt=item.title)
+								span(class="content-side__item-title")=item.title
+								span(class="content-side__item-text")=item.text
+					img(class="ingridients-section__content-central", src="/img/ingridients-center.png", alt="Ingridients")
+					.ingridients-section__content-side
+						each item in rightSide
+							.content-side__item
+								img(class="content-side__item-img", src=item.img, alt=item.title)
+								span(class="content-side__item-title")=item.title
+								span(class="content-side__item-text")=item.text
+			a(class="dark-btn" href="/") DISCOVER SCIENCE
+		.without-section
+			h2(class="title dark") Without
+			.box
+				.without-section__content
+					span(class="without-section__content-info") Certified Vegan, Non-GMO, Vegetarian Society, Halal and Kosher certifications
+					.without-section__content-list
+						each item in without
+							.content-list-item
+								img(src=item.img alt=item.text class="content-list-item-img")
+								span(class="content-list-item-text")=item.text
 

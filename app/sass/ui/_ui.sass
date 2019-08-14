@@ -177,3 +177,40 @@ select, input, textarea
     top: 50%
     transform: translate(-50%, -50%) rotate(90deg)
     background-color: $main
+
+.dark-btn
+  padding: 16px 24px
+  font-size: 20px
+  color: #ffffff
+  text-transform: uppercase
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  overflow: hidden
+  border-top: 2px solid transparent
+  border-bottom: 2px solid transparent
+  transition: .3s
+
+  &:before
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    background: $main
+    display: block
+    z-index: -1
+    top: 0
+    left: 0
+    transition: .3s
+
+  &:hover
+    border-top: 2px solid $main
+    border-bottom: 2px solid $main
+    color: $main
+    transition: .3s
+
+    &:before
+      top: -100%
+      transition: .3s
+
