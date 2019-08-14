@@ -170,4 +170,33 @@ append content
 							.content-list-item
 								img(src=item.img alt=item.text class="content-list-item-img")
 								span(class="content-list-item-text")=item.text
+		.choose-plan-section
+			.choose-plan-section-left
+				h2(class="title white") Simple But Consistent Routine is key for results
+				span(class="choose-plan-subtitle") Choose your Plan
+				.choose-plan-container
+					.plans
+						.plan
+							span(class="plan__status") Single Purchase
+							p(class="plan__price") for $115.00
+							a(href="/" class="plan__price-choose") + Choose
+						.plan
+							span(class="plan__status") Luimity Subscription
+							p(class="plan__price")
+								span(class="plan__price white") for
+								span(class="plan__price old") $115.00
+								span(class="plan__price new") $97.75/mo.
+								span(class="popular-achieve")
+							a(href="/" class="plan__price-choose") + Choose
+					.plans-info
+						.plans-info__item
+							img(src="img/icons/shipping.png", alt="Free Shipping" class="plans-info__item-img")
+							span(class="plans-info__item-text") Free Shipping
+						.plans-info__item
+							img(src="img/icons/cancel.png", alt="Cancel Anytime" class="plans-info__item-img")
+							span(class="plans-info__item-text") Cancel Anytime
+						.plans-info__item
+							img(src="img/icons/satisfaction.png", alt="Satisfaction Guaranteed" class="plans-info__item-img")
+							span(class="plans-info__item-text") Satisfaction Guaranteed
+			.choose-plan-section-right
 
