@@ -402,10 +402,106 @@
 			justify-content: center
 			padding-right: 85px
 
-			& .title.white
-				max-width: 435px
+			& .section-left-content
+				max-width: 560px
 				width: 100%
-    			text-align: center
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				& .title.white
+					max-width: 435px
+					width: 100%
+					text-align: center
+					margin-bottom: 10px
+
+				& .choose-plan-subtitle
+					display: flex
+					width: 100%
+					margin-bottom: 25px
+					font-size: 16px
+					color: #ffffff
+					text-transform: uppercase
+					justify-content: center
+
+				& .choose-plan-container
+					width: 100%
+					display: flex
+					flex-direction: row
+					margin-bottom: 25px
+					justify-content: flex-start
+					align-items: flex-start
+
+					& .plan
+						height: 180px
+						padding: 0px 55px 0px 15px
+						border-left: 2px solid rgba(255,255,255,.2)
+						display: flex
+						flex-direction: column
+						position: relative
+
+						&__status
+							font-size: 16px
+							color: rgba(248, 248, 248, .5)
+							text-transform: uppercase
+							margin-bottom: 10px
+							display: flex
+							width: 100%
+
+						&__price
+							font-size: 32px
+							text-transform: uppercase
+							color: rgba(248, 248, 248, .5)
+							margin-bottom: 25px
+							display: flex
+							width: 100%
+							font-weight: 600
+
+						&__choose
+							color: rgba(248, 248, 248, .5)
+							font-size: 24px
+							text-transform: uppercase 
+							font-weight: 600
+							transition: .3s
+
+						& .white
+							color: rgba(248, 248, 248, 1)
+						
+						& .old
+							margin-left: 5px
+							color: rgba(248, 248, 248, .5)
+							text-decoration: line-through
+
+						& .new
+							color: $green
+							margin-left: 5px
+
+						&__choose:hover
+							color: $orange
+							transition: .3s
+
+						& .popular-achieve
+							position: absolute
+							right: 0
+							top: 0
+
+				& .plans-info
+					width: 100%
+					display: flex
+					align-items: center
+					flex-direction: row
+					justify-content: space-between
+
+					&__item
+						opacity: .5
+						&-img
+							margin-right: 10px
+							width: 16px
+						&-text
+							font-size: 16px
+							color: #ffffff
+							text-transform: uppercase
+
 		&-right
 			width: 50%
 			height: 100%
@@ -413,3 +509,73 @@
 			background-image: url(../img/leafe.jpg)
 			background-size: cover
 			
+	& .mens-told
+		width: 100%
+		margin-bottom: 95px
+
+		& .title.dark
+			max-width: 250px
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 40px
+			
+		&__slider
+			width: 100%
+
+			&-elem
+				border-left: 2px solid #D9DADC
+				padding-left: 20px
+				margin-right: 50px
+				display: flex
+				flex-direction: column
+
+				& .slider-comment
+					color: $main
+					font-size: 20px
+					font-weight: 600
+					margin-bottom: 30px
+				
+				& .slider-info
+					width: 100%
+					display: flex
+					align-items: center
+
+					&__image
+						width: 72px
+						margin-right: 10px
+
+					&__commentator
+						display: flex
+						flex-direction: column
+
+						&-name
+							font-size: 14px
+							color: $main
+							display: flex
+							width: 100%
+							margin-bottom: 10px
+						
+						&-loc
+							font-size: 14px
+							color: $main
+							opacity: .5
+			& .owl-dots
+				width: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-top: 40px
+
+				& .owl-dot
+					width: 16px
+					height: 16px
+					border-radius: 50%
+					border: 2px solid $main
+					transition: .3s
+					display: flex
+					margin: 0px 12px
+
+					&.active
+						transition: .3s
+						background: $main
+

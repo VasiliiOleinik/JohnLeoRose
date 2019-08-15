@@ -68,6 +68,50 @@ append content
 				text: 'Parabens free'
 			}
 		];
+		var slider = [
+			{
+				img: '/img/stephen.jpg',
+				comment: 'The Nest home security system is a revelation! So convenient and looks cool too!',
+				name: 'Stephen Fields',
+				location: 'Seattle, WA',
+			},
+			{
+				img: '/img/bryan.jpg',
+				comment: 'This product is genius. Its easy to install and looks great. The functionality is amazing - it just works!',
+				name: 'Bryan Bates',
+				location: 'WA',
+			},
+			{
+				img: 'img/joseph.jpg',
+				comment: 'Looks great. Operates exactly as expected. Setup was as easy as pie. Hasnt failed me yet!',
+				name: 'Joseph Hansen',
+				location: 'WA',
+			},
+			{
+				img: '/img/stephen.jpg',
+				comment: 'The Nest home security system is a revelation! So convenient and looks cool too!',
+				name: 'Stephen Fields',
+				location: 'Seattle, WA',
+			},
+			{
+				img: '/img/bryan.jpg',
+				comment: 'This product is genius. Its easy to install and looks great. The functionality is amazing - it just works!',
+				name: 'Bryan Bates',
+				location: 'WA',
+			},
+			{
+				img: 'img/joseph.jpg',
+				comment: 'Looks great. Operates exactly as expected. Setup was as easy as pie. Hasnt failed me yet!',
+				name: 'Joseph Hansen',
+				location: 'WA',
+			},
+			{
+				img: '/img/stephen.jpg',
+				comment: 'The Nest home security system is a revelation! So convenient and looks cool too!',
+				name: 'Stephen Fields',
+				location: 'Seattle, WA',
+			},
+		];
 	main.main
 		.main__banner
 			.box
@@ -172,22 +216,23 @@ append content
 								span(class="content-list-item-text")=item.text
 		.choose-plan-section
 			.choose-plan-section-left
-				h2(class="title white") Simple But Consistent Routine is key for results
-				span(class="choose-plan-subtitle") Choose your Plan
-				.choose-plan-container
-					.plans
+				.section-left-content
+					h2(class="title white") Simple But Consistent Routine is key for results
+					span(class="choose-plan-subtitle") Choose your Plan
+					.choose-plan-container
 						.plan
 							span(class="plan__status") Single Purchase
 							p(class="plan__price") for $115.00
-							a(href="/" class="plan__price-choose") + Choose
+							a(href="/" class="plan__choose") + Choose
 						.plan
-							span(class="plan__status") Luimity Subscription
+							span(class="plan__status white") Luimity Subscription
 							p(class="plan__price")
-								span(class="plan__price white") for
-								span(class="plan__price old") $115.00
-								span(class="plan__price new") $97.75/mo.
-								span(class="popular-achieve")
-							a(href="/" class="plan__price-choose") + Choose
+								span(class="white") for
+								span(class="old") $115.00
+								span(class="new") $97.75/mo.
+								.popular-achieve
+									span popular
+							a(href="/" class="plan__choose new") + Choose
 					.plans-info
 						.plans-info__item
 							img(src="img/icons/shipping.png", alt="Free Shipping" class="plans-info__item-img")
@@ -199,4 +244,19 @@ append content
 							img(src="img/icons/satisfaction.png", alt="Satisfaction Guaranteed" class="plans-info__item-img")
 							span(class="plans-info__item-text") Satisfaction Guaranteed
 			.choose-plan-section-right
+
+		.mens-told
+			h2(class="title dark") Mens talk about this
+			.box
+				.mens-told__slider.owl-carousel
+					each item in slider
+						.mens-told__slider-elem
+							span(class="slider-comment")=item.comment
+							.slider-info
+								img(src=item.img, alt=item.name class="slider-info__image")
+								p(class="slider-info__commentator") 
+									span(class="slider-info__commentator-name")=item.name
+									span(class="slider-info__commentator-loc")=item.location
+
+
 
