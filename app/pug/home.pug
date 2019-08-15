@@ -138,14 +138,14 @@ append content
 							img(src="img/icons/shop.svg", alt="Shop")
 							span start shopping
 		.combination-section
-			a(class="scroll-to-explore" id="scroll-to-explore-js" href="javascript:void(0)") Scroll to Explore
+			a(class="scroll-to-explore" id="scroll-to-explore-js" href="#scroll-to-explore") Scroll to Explore
 			.cookies
 				.cookies-container
 					span(class="cookies-text") By further browsing on our site, you agree to our Use of Cookies to improve your experience and deliver content and services tailored to your interests
 					a(class="hide-cookies" id="hide-cookies-js" href="javascript:void(0)") Close & Accept
 			.box
 				img(class="combination-section__left-baloon", src="img/baloon2.png", alt="Baloon")
-				.combination-section__main
+				.combination-section__main#scroll-to-explore
 					h2(class="title dark") Combination of cream & pills is key for results men’s skin all types all ages
 					span(class="combination-section__main-text") Based on 40 years of pharma science research
 					.combination-section__main-list
@@ -169,7 +169,7 @@ append content
 			h2(class="title dark") Results
 			.box
 				.result-section__list
-					.result-section__list-item
+					.result-section__list-item.revealator-slideup.revealator-delay1.revealator-within
 						.item-ico-section
 							img(src="/img/icons/instant.png", alt="Instant")
 						.item-text-section
@@ -179,7 +179,7 @@ append content
 									li(class="item-text-section__list-item")
 										.plus-ico
 										span=item
-					.result-section__list-item
+					.result-section__list-item.revealator-slideup.revealator-delay1.revealator-within
 						.item-ico-section
 							img(src="/img/icons/renewal.png", alt="Renewal")
 						.item-text-section
@@ -189,7 +189,7 @@ append content
 									li(class="item-text-section__list-item")
 										.plus-ico
 										span=item
-					.result-section__list-item
+					.result-section__list-item.revealator-slideup.revealator-delay1.revealator-within
 						.item-ico-section
 							img(src="/img/icons/results.png", alt="Result") 
 						.item-text-section
@@ -201,7 +201,7 @@ append content
 										span=item
 		.ingridients-section
 			h2(class="title dark") Six active ingridients
-			.box
+			.box.revealator-zoomout.revealator-delay
 				.ingridients-section__content
 					.ingridients-section__content-side
 						each item in leftSide
@@ -224,7 +224,7 @@ append content
 					span(class="without-section__content-info") Certified Vegan, Non-GMO, Vegetarian Society, Halal and Kosher certifications
 					.without-section__content-list
 						each item in without
-							.content-list-item
+							.content-list-item.revealator-zoomin.revealator-delay1.revealator-within
 								img(class="content-list-item-img" src=item.img alt=item.text)
 								span(class="content-list-item-text")=item.text
 		.choose-plan-section
@@ -271,11 +271,11 @@ append content
 									span(class="slider-info__commentator-name")=item.name
 									span(class="slider-info__commentator-loc")=item.location
 		.images-section
-			.images-section__top
+			.images-section__top.revealator-slideleft.revealator-delay
 				each item in imagesTop
 					.images-elem
 						img(src=item, alt="Imge top")
-			.images-section__bot
+			.images-section__bot.revealator-slideright.revealator-delay
 				each item in imagesBot
 					.images-elem
 						img(src=item, alt="Imge bot")
@@ -288,8 +288,8 @@ append content
 					span(class="subscribe-section__content-subtitle") Sign up to get updates on product releases and other news
 					form(class="subscribe-section__content-form" id="subscribe" action="")
 						.label
-							input(name="email" type="text")
-							label(for="email" class="active-inp")
+							input(name="email" type="text" class="input-js")
+							label(for="email" class="dynamic-label")
 								img(src="img/icons/mail.svg", alt="Mail")
 								span Your email
 						button(class="subscribe-form-submit dark-btn" type="submit") subscribe

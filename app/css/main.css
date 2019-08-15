@@ -1718,7 +1718,7 @@ header .header__content {
             position: relative;
             z-index: 10;
             border: 2px solid #D9DADC; }
-          .main .subscribe-section__content-form .label .active-inp {
+          .main .subscribe-section__content-form .label .dynamic-label {
             position: absolute;
             top: 50%;
             left: 24px;
@@ -1739,10 +1739,10 @@ header .header__content {
                 -ms-flex-align: center;
                     align-items: center;
             z-index: 1; }
-            .main .subscribe-section__content-form .label .active-inp img {
+            .main .subscribe-section__content-form .label .dynamic-label img {
               width: 24px;
               margin-right: 10px; }
-            .main .subscribe-section__content-form .label .active-inp span {
+            .main .subscribe-section__content-form .label .dynamic-label span {
               font-size: 20px;
               font-family: Akrobat;
               text-transform: uppercase;
@@ -1757,3 +1757,10 @@ header .header__content {
                   flex-shrink: 0;
           border-top: 2px solid #01002C;
           border-bottom: 2px solid #01002C; }
+
+.invalid {
+  color: red;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%; }
