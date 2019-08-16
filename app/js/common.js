@@ -80,12 +80,6 @@ $(function() {
   });
 
   lazyScroll($("#scroll-to-explore-js"), 500);
-
-  if (screenWidth <= 768) {
-    $('*[class*="revealator"]').each(function (item, elem) {
-        $(elem).removeClass('.revealator-zoomout');
-    });
-  }
 });
 
 // Lazy scroll
