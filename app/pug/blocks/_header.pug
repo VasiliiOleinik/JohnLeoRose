@@ -6,6 +6,20 @@
 	];
 
 header
+	.mobile-menu
+		ul(class="mobile-menu__first-list")
+			each item in menu
+				li(class="mobile-menu__item")
+					a(href="/")=item
+		ul(class="mobile-menu__second-list")
+			li(class="mobile-menu__item")
+				a(href="/") Contacts us
+			li(class="mobile-menu__item")
+				a(href="/")
+					img(src="img/icons/user-white.svg", alt="User")
+					span My account
+
+
 	#header-info-block
 		span All orders have FREE and Fast shipping
 		img(src="img/icons/close.svg", alt="" id="close-header-info")
@@ -22,6 +36,10 @@ header
 							li(class="menu__list-item")
 								a(href="/")=item
 			.header__content-right
+				.mobile-menu-btn#mobile-menu-btn-js
+					span(class="hamburger-ico")
+				a(href="/" class="logo-mob")
+					img(src="../img/icons/logo-mob.png", alt="Logo")
 				a(href="/" class='contact-us') Contact us
 				a(href="/" class="header-personal")
 					img(src="img/icons/user.svg", alt="User")

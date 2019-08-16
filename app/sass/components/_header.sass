@@ -7,6 +7,7 @@ header
 		align-items: center
 		justify-content: center
 		position: relative
+		z-index: 100
 
 		& span
 			font-size: 14px
@@ -22,6 +23,8 @@ header
 
 	& .header__content
 		position: relative
+		background: #ffffff
+		z-index: 100
 
 		& .box
 			width: 100%
@@ -106,5 +109,128 @@ header
 				& .header-personal
 					margin-right: 20px
 
+.mobile-menu-btn,
+.logo-mob,
+.mobile-menu
+	display: none
 
+@include media( 768)
+	.mobile-menu-btn,
+	.logo-mob
+		display: flex
+	
+	.mobile-menu-btn
+		width: 24px
+		height: 24px
+		align-items: center
+		justify-content: flex-start
+		cursor: pointer
+		position: relative
+		border: 2px solid transparent
+		transition: .3s
+
+		& .hamburger-ico
+			width: 50%
+			height: 2px
+			background: $main
+			border-radius: 10px
+			display: flex
+			transition: .3s
+
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 2px
+				display: flex
+				background: $main
+				transition: .3s
 		
+		&.active
+			border-color: $main
+			border-radius: 50%
+			transition: .3s
+			& .hamburger-ico
+				width: 0
+				height: 0
+				background: $main
+				border-radius: 10px
+				display: flex
+				transition: .3s
+
+				&:before
+					content: ""
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%) rotate(45deg)
+					width: 13px
+					height: 2px
+					display: flex
+					background: $main
+					transition: .3s
+				
+				
+				&:after
+					content: ""
+					position: absolute
+					bottom: initial
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%) rotate(-45deg)
+					width: 13px
+					height: 2px
+					display: flex
+					background: $main
+					transition: .3s
+	.mobile-menu
+		width: 100%
+		height: 100%
+		position: fixed
+		top: 0
+		left: 0
+		background: $main
+		z-index: 90
+		padding-top: 150px
+		color: #ffffff
+		text-align: center
+		font-size: 20px
+		text-transform: uppercase
+		overflow-y: auto
+
+		& .mobile-menu__first-list
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			margin-bottom: 40px
+			position: relative
+
+			&:after
+				content: ''
+				width: 100px
+				height: 2px
+				background: #ffffff
+				display: block
+		
+		& .mobile-menu__second-list
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+
+		& .mobile-menu__item
+			margin-bottom: 32px
+
+			& a
+				width: 100%
+				display: flex
+				align-items: center
+				flex-direction: row
+
+				& img
+					margin-right: 10px

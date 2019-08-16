@@ -10,7 +10,7 @@ $(function() {
     $(".cookies").slideUp();
   });
 
-  // Dinamics label
+  // Dinamics labels
   $(".input-js").on("click", function() {
     $(this)
       .siblings(".dynamic-label")
@@ -39,6 +39,18 @@ $(function() {
           "box-shadow": "none",
           "z-index": "5"
         });
+    }
+  });
+
+  // Mobile menu
+  $('#mobile-menu-btn-js').on('click', function(){
+    $(this).toggleClass('active');
+    if($(this).hasClass('active')){
+      $('.mobile-menu').slideDown();
+      $("html, body").css({'overflow':'hidden'});
+    } else {
+      $('.mobile-menu').slideUp();
+      $("html, body").css({'overflow':'auto'});
     }
   });
 
