@@ -271,13 +271,13 @@ append content
 									span(class="slider-info__commentator-name")=item.name
 									span(class="slider-info__commentator-loc")=item.location
 		.images-section
-			.images-section__top.revealator-slideleft.revealator-delay
+			.images-section__top
 				each item in imagesTop
-					.images-elem
+					.images-elem.revealator-slideleft.revealator-delay
 						img(src=item, alt="Imge top")
-			.images-section__bot.revealator-slideright.revealator-delay
+			.images-section__bot
 				each item in imagesBot
-					.images-elem
+					.images-elem.revealator-slideright.revealator-delay
 						img(src=item, alt="Imge bot")
 				.images-elem
 					a(class="images-elem__link" href="https://www.instagram.com/Johnleorose/") Follow<br> @Johnleorose

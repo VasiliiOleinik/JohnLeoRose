@@ -275,6 +275,7 @@
 	& .ingridients-section
 		width: 100%
 		margin-bottom: 95px
+		overflow: hidden
 			
 		& .title.dark
 			max-width: 270px
@@ -585,6 +586,7 @@
 		display: flex
 		flex-direction: column
 		align-items: flex-start
+		overflow: hidden
 
 		& .images-elem
 			width: 100%
@@ -692,10 +694,150 @@
 					display: flex
 					flex-shrink: 0
 					border-top: 2px solid $main
-					border-bottom: 2px solid $main
-.invalid
-	color: red
-	position: absolute
-	top: 100%
-	left: 0
-	width: 100%
+
+@include media( 1440 )
+	header .header__content .box .header__content-left .logo-block:before
+		width: 14%
+
+@include media( 1300 )
+	.main .choose-plan-section-left
+		padding-right: 20px
+	.main .choose-plan-section
+		height: 500px
+@include media( 1199 )
+	.main .choose-plan-section
+		flex-direction: column
+		width: 100%
+		height: auto
+	.main .choose-plan-section-left
+		width: 100%
+		order: 2
+		padding: 40px 15px
+		justify-content: center
+		align-items: center
+	.main .choose-plan-section-right
+		width: 100%
+		order: 1
+		height: 360px
+@include media( 991 )
+	.main .combination-section__main-list
+		flex-direction: column
+	.main .combination-section__main-list .list-item:after,
+	.main .combination-section__right-baloon,
+	.main .combination-section__left-baloon
+		display: none
+@include media( 768 )
+	.main .result-section__list
+		justify-content: center
+		align-items: center
+		flex-direction: column
+	header .header__content .box .header__content-left
+		display: none
+	header .header__content .box .header__content-right
+		width: 100%
+		justify-content: space-between
+	header .header__content .box .header__content-right .contact-us
+		display: none
+	header .header__content .box .header__content-right .header-personal
+		display: none
+	.main .ingridients-section__content-central
+		width: 100%
+		position: static
+		display: flex
+		order: 1
+		transform: initial
+		margin: 0 auto
+	.main .ingridients-section__content
+		flex-wrap: wrap
+	.main .ingridients-section__content-side
+		max-width: 48%
+		order: 2
+	.main .choose-plan-section-left .section-left-content
+		max-width: initial
+		width: 100%
+	.main .images-section__top
+		display: none
+	.main .images-section__bot
+		flex-direction: initial
+		flex-wrap: wrap
+	.main .images-section .images-elem
+		width: 180px
+		height: 180px
+	.footer__first-layout
+		flex-direction: initial
+		flex-wrap: wrap
+	.footer__section.section-logo
+		width: 100%
+		margin-bottom: 70px
+	.footer__section,
+	.footer__section.about
+		width: 50%
+		margin: 0 auto
+		margin-bottom: 30px
+	.main .combination-section .cookies
+		padding: 20px
+		height: auto
+	.main .combination-section .cookies-container
+		flex-direction: column
+	.main .combination-section .cookies-container .hide-cookies
+		margin-top: 15px
+	.main .mens-told__slider-elem
+		border: none
+	.main .choose-plan-section-left .section-left-content .choose-plan-container .plan__price
+		flex-wrap: wrap
+	.title
+		font-size: 28px
+	.title.dark
+		border: none
+		max-width: initial !important
+		text-align: center
+	.main .choose-plan-section-left .section-left-content .choose-plan-container .plan
+		border: none
+	.main .choose-plan-section-left .section-left-content .choose-plan-container .plan__price
+		font-size: 24px
+	.main .choose-plan-section-left .section-left-content .choose-plan-container .plan__status
+		font-size: 14px
+	.main .choose-plan-section-left .section-left-content .choose-plan-container .plan__choose
+		font-size: 20px
+	.main .choose-plan-section-left .section-left-content .plans-info
+		flex-direction: initial
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+	.main .choose-plan-section-left .section-left-content .plans-info__item
+		width: 50%
+		display: flex
+		justify-content: center
+		margin-bottom: 10px
+	.main .choose-plan-section-left .section-left-content .plans-info__item-img
+		width: 16px
+		height: 16px
+	.main .choose-plan-section-left .section-left-content .plans-info__item-text
+		font-size: 14px
+	.main .combination-section
+		margin-bottom: 55px
+		padding-bottom: 55px
+	.main .result-section .title.dark,
+	.main .ingridients-section .title.dark
+		margin-bottom: 30px
+	.main .result-section,
+	.main .ingridients-section,
+	.main .without-section,
+	.main .choose-plan-section,
+	.main .images-section,
+	.main .subscribe-section
+		margin-bottom: 55px
+	.main .choose-plan-section-left .section-left-content .choose-plan-container .plan
+		padding: 0px 15px
+	.main .images-section__bot img
+		width: 100%
+		height: 100%
+	.main .images-section .images-elem
+		width: 50%
+@include media( 350 )
+	.main .subscribe-section__content-form .subscribe-form-submit,
+	.main .subscribe-section__content-form .label input,
+	.main .without-section__content-list .content-list-item-text
+		font-size: 16px
+	.main .without-section__content-list .content-list-item-img
+		width: 50px
